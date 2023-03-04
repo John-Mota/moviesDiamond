@@ -18,7 +18,7 @@
   }
   
   .nav-link:hover {
-    color: #F7D12C !important;
+    color: #f72c2c !important;
   }
   
   .input-search {
@@ -30,27 +30,20 @@
   .form-control {
     background-color: #232323;
     color: whitesmoke;
-    border-color: #F7D12C;
+    border-color: #f72c2c;
   }
   
   .btn-search {
-    background-color: #F7D12C;
-    border-color: #F7D12C;
+    background-color: #f72c2c;
+    border-color: #f72c2c;
   }
   
-  .img-lupa {
-    width: 25px;
-    height: 25px;
-  }
   
-  .btn-search:hover .img-lupa {
-    display: none;
-  }
   
   .btn-search:hover:before {
     content: "Search";
     font-size: 18px;
-    color: whitesmoke;
+    color: black;
     display: inline-block;
     width: 60px;
     text-align: center;

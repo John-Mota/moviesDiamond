@@ -1,1 +1,26 @@
-<p>home works!</p>
+<div>
+    <app-header></app-header>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Filmes Populares</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let movie of movies">
+        <div class="card mb-4">
+          <img [src]="getImageUrl(movie.poster_path)" class="card-img-top" alt="Poster do filme">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.overview }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{ movie.release_date }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
