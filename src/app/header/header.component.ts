@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 import { MoviesService } from '../movies.service';
+
+
 
 @Component({
   selector: 'app-header',
@@ -7,20 +10,22 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  private apiKey: string = 'b6ff45cb8c9ed4be824152fec3320156'
-  private url: string = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}language=en-US&page=1`
+  public nameMovie: string = ''
 
   movies: any[] = []
-  constructor(private moviesService: MoviesService) {}
+  constructor(
+    private moviesService: MoviesService,
+    private homeComponent: HomeComponent
+    ) {}
 
-  ngOnInit(): void {
-    this.moviesService.getMoviesPopulares(this.url)
-    .subscribe((response: any) => {
-      this.movies = response.results;
-    })
-  }
-  getImageUrl(path: string): string {
-    return this.moviesService.getImageUrl(path)
-  }
+  ngOnInit(): void {}
+
+  
+  
+
+  public searchMovies(query: string) {
+    this.homeComponent.searchMovies(query);
+    }
+  
 
 }

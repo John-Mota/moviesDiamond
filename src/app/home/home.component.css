@@ -1,0 +1,40 @@
+.title-home {
+    color: #f72c2c;
+    text-align: center;
+}
+
+.card-tam {
+    width: 25vw;
+    padding: 10px;
+
+}
+
+.card-tam img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .card-tam {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-tam {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-tam {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-tam {
+        max-width: 350px;
+    }
+}

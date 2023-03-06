@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
-import axios from 'axios';
+
 
 @Component({
   selector: 'app-home',
@@ -8,22 +8,54 @@ import axios from 'axios';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private apiKey: string = 'b6ff45cb8c9ed4be824152fec3320156'
-  private url: string = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}language=en-US&page=1`
+  
+  
+  public movies: any[] = [];
+  public movieTitle!: string;
+  public hasSearchResults: boolean = false;
+  constructor (
+    private moviesService: MoviesService
+    ) {}
 
-  movies: any[] = []
-  constructor (private moviesService: MoviesService) {}
+  
 
   ngOnInit(): void {
     
-    this.moviesService.getMoviesPopulares(this.url)
-    .subscribe((response: any) => {
-      this.movies = response.results;
-    })
-      
-  }
-  getImageUrl(path: string): string {
-    return this.moviesService.getImageUrl(path)
+    
+    this.popularMovies() 
+    
+    this.moviesService.getSearchResults().subscribe((results: any[]) => {
+      this.movies = results;
+      this.hasSearchResults = results.length > 0;
+    });
   }
 
+
+
+  public popularMovies(): void {
+    if(!this.hasSearchResults) {
+      this.moviesService.getMoviesPopulares()
+      .subscribe((response: any) => {
+      this.movies = response.results
+    });
+    }
+    
+  }
+
+  public searchMovies(query: string): void {
+    this.moviesService.getMoviesSearch(query)
+    .subscribe((response: any) => {
+      this.moviesService.updateSearchResults(response.results);
+      this.hasSearchResults = true;
+    })
+  }
+
+
+  
+
+  public getImageUrl(path: string): string {
+    return this.moviesService.getImageUrl(path)
+  }
 }
+
+

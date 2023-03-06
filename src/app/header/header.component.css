@@ -7,10 +7,10 @@
     font-weight: bold;
   }
   
-  .navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
+  .form-search {
+    display: flex;
   }
+  
   
   .nav-link {
     color: whitesmoke !important;
@@ -36,13 +36,20 @@
   .btn-search {
     background-color: #f72c2c;
     border-color: #f72c2c;
+    margin-left: -30px;
+    
+  }
+
+  .search-tam {
+    align-items: end;
+    width: 300px;
   }
   
   
   
   .btn-search:hover:before {
     content: "Search";
-    font-size: 18px;
+    
     color: black;
     display: inline-block;
     width: 60px;
