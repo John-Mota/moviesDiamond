@@ -49,6 +49,12 @@ export class MoviesService {
     return `https://image.tmdb.org/t/p/w500/${path}`;
   }
 
+  public getMovieId(id: number): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}&languagem=en-US&page1`
+    return this.http.get(url)
+  }
+
+  //https://api.themoviedb.org/3/movie/<filme-id>?api_key=<sua-chave>language=en-US
   
 }
   
