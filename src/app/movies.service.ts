@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import axios from 'axios';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { SafeUrl } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,7 @@ export class MoviesService {
   private popularEndPoint: string = '/movie/popular'
   //?api_key=
   public movieTitle: any
+  sanitizer: any;
   
   constructor(private http: HttpClient) {}
 
@@ -54,7 +55,24 @@ export class MoviesService {
     return this.http.get(url)
   }
 
-  //https://api.themoviedb.org/3/movie/<filme-id>?api_key=<sua-chave>language=en-US
+  public getImagePost(id: number): Observable<string> {
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}`;
+
+    return this.http.get<any>(url).pipe(
+      map(response => {
+        const imagePath = response.poster_path;
+        return `https://image.tmdb.org/t/p/original${imagePath}`;
+      })
+    );
+}
+  
   
 }
+  
+
+ 
+
+
+  
+
   

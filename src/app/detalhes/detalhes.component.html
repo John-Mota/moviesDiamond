@@ -2,10 +2,12 @@
 
 <div *ngIf="movie" class="container borda  my-5">
     <div class="row d-flex justify-content-center align-items-center" >
-        <div class="col-sm-12 col-md-6 align-items-center">
-            <img class="img-tam img-fluid" [src]="getImageUrl(movie.poster_path)" alt="Poster do filme">
+        <div class="col-md-6 col-lg-5 align-items-center">
+            <a [routerLink]="['/post/img', movie.id]">
+                <img class="img-tam img-fluid" [src]="getImageUrl(movie.poster_path)" alt="Poster do filme">
+            </a>
         </div>
-        <div class="col-sm-12 col-md-4 text-center text-md-left" style="color: aliceblue;">
+        <div class="col-md-6 col-lg-7 d-flex flex-column justify-content-center" style="color: aliceblue;">
             <h1>{{ movie.title}}</h1>
             <p>{{movie.overview}}</p>
             <p>Lnçamento: {{ movie.release_date }}</p>

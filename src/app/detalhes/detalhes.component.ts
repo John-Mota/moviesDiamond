@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalhes',
@@ -13,7 +13,8 @@ export class DetalhesComponent implements OnInit {
   
 constructor(
   private moviesService: MoviesService,
-  private route: ActivatedRoute
+  private route: ActivatedRoute,
+  private readonly router: Router
   ) {}
 
 
@@ -23,6 +24,7 @@ ngOnInit(): void {
   if (id) {
     this.moviesService.getMovieId(+id).subscribe((response: any) => {
       this.movie = response;
+      //console.log(this.movie.poster_path)
     });
   }
     
@@ -33,16 +35,10 @@ ngOnInit(): void {
   public getImageUrl(path: string): string {
     return this.moviesService.getImageUrl(path)
   }
+
+  public goToMovieDetails(id: number): void {
+    this.router.navigate(['post', 'img', id]);
+  }
 }
 
-
-/*
-public searchMovies(query: string): void {
-  this.moviesService.getMoviesSearch(query)
-  .subscribe((response: any) => {
-    this.moviesService.updateSearchResults(response.results);
-    this.hasSearchResults = true;
-  })
-}
-*/
 
