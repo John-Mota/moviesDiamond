@@ -23,9 +23,14 @@ ngOnInit(): void {
   if (id) {
     this.moviesService.getMovieId(+id).subscribe((response: any) => {
       this.movie = response;
+      console.log(this.movie)
     });
   }
     
+}
+
+public goBack() {
+  window.history.back();
 }
 
 

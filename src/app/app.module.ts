@@ -12,13 +12,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MoviesService } from './movies.service';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { ImagePosterComponent } from './image-poster/image-poster.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    ImagePosterComponent
   ],
   imports: [
     BrowserModule,

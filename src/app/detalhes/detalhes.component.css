@@ -21,10 +21,49 @@
 
 .cabecalho {
     padding-top: 15px;
-   
+    -webkit-text-stroke: 0.3px #c2bdbd;
     text-align: center;
     font-size: 50px;
-    color: aliceblue;
+    color: #f72c2c;
 }
+
+/* CSS para texto dos detalhes */
+.text-datails > h1 {
+    color: #f72c2c;
+    font-size: 55px;
+    text-align: center;
+    -webkit-text-stroke: 0.3px #0a0a0a;
+}
+
+.lancamento {
+    color: #f72c2c;
+    text-align: center;
+    -webkit-text-stroke: 0.3px #0a0a0a;
+    
+} 
+
+.details-movie {
+    color: #f72c2c;
+    width: 60%;
+    margin-left: 130px;
+    -webkit-text-stroke: 0.3px #0a0a0a;
+}
+
+.nota-datails{
+    color: #f72c2c;
+    text-align: center;
+    -webkit-text-stroke: 0.3px #0a0a0a;
+}
+
+/* CSS para o botão de voltar de detlahes */
+.btn-color {
+    background-color: #f72c2c;
+    color: black;
+    border: solid 1px black;
+ }
+
+ .btn-color:hover {
+    background-color: #a00404;
+ }
   
 
