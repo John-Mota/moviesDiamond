@@ -6,10 +6,10 @@
               <a [routerLink]="['/detalhes', movie.id]" title="Click na imagem para ver os detalhes">
                 <img [src]="getImageUrl(movie.poster_path)" class="card-img-top img-fluid w-100" alt="{{movie.title}}">
               </a>
-              <div class="card-body">
+              <div class="card-body title-tam">
                 <h5 class="card-title">{{ movie.title }}</h5>
               </div>
-              <div class="card-footer">
+              <div class="card-footer" style="margin-top: 1rem;">
                 <small class="text-muted">{{ movie.release_date }}</small>
               </div>
             </div>

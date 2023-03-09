@@ -2,6 +2,15 @@
     color: #f72c2c;
     text-align: center;
 }
+/* CSS para ajustar os titúlos do mesmo tamanho*/
+.title-tam {
+  height: 25px;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .card-tam {
     width: 25vw;

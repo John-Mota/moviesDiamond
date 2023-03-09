@@ -2,10 +2,12 @@
     background-color: #232323;
    
   }
-  
+
+
   .navbar-brand {
     font-size: 30px;
     font-weight: bold;
+    margin-left: 30px;
   }
   
   .form-search {
@@ -51,6 +53,16 @@
     color: black;
     display: inline-block;
     text-align: center;
+  }
+
+  /* CSS para os icones git e linkedin*/
+
+  .ul-icon > li {
+    margin: 0 8px;
+  }
+  
+  .ul-icon {
+    margin-right: 20px;
   }
 
   
