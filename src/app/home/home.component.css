@@ -15,11 +15,6 @@
     object-fit: cover;
 }
 
-.tam-padra {
-    width: 138;
-    height: 335;
-}
-
 @media (min-width: 576px) {
     .card-tam {
         max-width: 200px;
