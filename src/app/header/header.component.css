@@ -1,5 +1,6 @@
 .navbar {
     background-color: #232323;
+   
   }
   
   .navbar-brand {
@@ -45,14 +46,10 @@
     width: 300px;
   }
   
-  
-  
-  .btn-search:hover:before {
-    content: "Search";
-    
+  .btn-search:hover {
+    background-color: #a00404;
     color: black;
     display: inline-block;
-    width: 60px;
     text-align: center;
   }
 
