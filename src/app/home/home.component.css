@@ -19,7 +19,8 @@
 .card-tam {
   width: 25vw;
   padding-top: 7px;
-  height: 500px;
+  height: 360;
+  margin-bottom: auto;
 }
 
 .card-tam img {
@@ -34,12 +35,15 @@
     margin-right: 10px;
   }
   
+  
 }
 
 @media (min-width: 768px) {
   .card-tam {
     max-width: 200px;
+    
   }
+  
 }
 
 @media (min-width: 992px) {
@@ -62,3 +66,5 @@
     max-width: 19% !important;
   }
 }
+
+
