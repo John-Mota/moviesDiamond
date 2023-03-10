@@ -20,12 +20,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  
-  
-
   public searchMovies(query: string) {
     this.homeComponent.searchMovies(query);
     }
-  
 
 }

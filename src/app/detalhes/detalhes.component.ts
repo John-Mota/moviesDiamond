@@ -25,29 +25,14 @@ ngOnInit(): void {
       this.movie = response;
       console.log(this.movie)
     });
-  }
-    
+  }  
 }
 
 public goBack() {
   window.history.back();
 }
 
-
-
-  public getImageUrl(path: string): string {
-    return this.moviesService.getImageUrl(path)
-  }
+public getImageUrl(path: string): string {
+  return this.moviesService.getImageUrl(path)
 }
-
-
-/*
-public searchMovies(query: string): void {
-  this.moviesService.getMoviesSearch(query)
-  .subscribe((response: any) => {
-    this.moviesService.updateSearchResults(response.results);
-    this.hasSearchResults = true;
-  })
 }
-*/
-

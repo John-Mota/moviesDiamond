@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import axios from 'axios';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -12,8 +11,6 @@ export class MoviesService {
 
   private apiKey: string = 'b6ff45cb8c9ed4be824152fec3320156';
   private apiUrl: string = 'https://api.themoviedb.org/3';
-  private popularEndPoint: string = '/movie/popular'
-  //?api_key=
   public movieTitle: any
   
   constructor(private http: HttpClient) {}
@@ -23,7 +20,7 @@ export class MoviesService {
 
     return this.http.get(url)
   }
-  //  https://api.themoviedb.org/3/search/movie?api_key=b6ff45cb8c9ed4be824152fec3320156&query=Black Panther: Wakanda Forever
+  
   public getMoviesSearch(query: string): Observable<any> {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${query}`; 
 
@@ -53,8 +50,6 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}&languagem=en-US&page1`
     return this.http.get(url)
   }
-
-  //https://api.themoviedb.org/3/movie/<filme-id>?api_key=<sua-chave>language=en-US
   
 }
   

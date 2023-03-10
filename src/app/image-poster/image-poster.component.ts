@@ -38,9 +38,7 @@ export class ImagePosterComponent implements OnInit {
           this.imageUrl = this.movie.poster_path
           
         });
-      }
-
-      
+      } 
   }
 
   public getImagePost(): string {
@@ -60,7 +58,4 @@ export class ImagePosterComponent implements OnInit {
   public goBack() {
     window.history.back();
   }
-  
-
-
 }

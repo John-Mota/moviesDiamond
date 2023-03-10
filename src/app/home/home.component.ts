@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     
-    
     this.popularMovies() 
     
     this.moviesService.getSearchResults().subscribe((results: any[]) => {
@@ -30,8 +29,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
-
   public popularMovies(): void {
     if(!this.hasSearchResults) {
       this.moviesService.getMoviesPopulares()
@@ -39,7 +36,6 @@ export class HomeComponent implements OnInit {
       this.movies = response.results
     });
     }
-    
   }
 
   public searchMovies(query: string): void {
@@ -50,12 +46,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-
-  
-
   public getImageUrl(path: string): string {
     return this.moviesService.getImageUrl(path)
   }
 }
-
-
