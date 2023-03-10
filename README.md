@@ -1,27 +1,50 @@
-# MoviesDiamond
+# Filmes Diamond
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Projeto para teste de conhecimento do estágio 
+- Criar um projeto para consumir uma api da TMDB,
+onde o usuário possa ver os fimes em destaques e 
+seus detalhes.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+- Angular CLI: 15.2.1
+- Node.js: 18.14.2
+- Package Manager: npm 9.5.0
+- Bootstrap: 5.3.0-alpha1
+- Jquery: 3.6.3
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Package                        Versões
 
-## Build
+- @angular-devkit/architect       0.1502.1
+- @angular-devkit/build-angular   15.2.1
+- @angular-devkit/core            15.2.1
+- @angular-devkit/schematics      15.2.1
+- @schematics/angular             15.2.1
+- rxjs                            7.8.0
+- typescript                      4.9.5
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+1. Clone o repositório.
+2. Instale as dependências com `npm install`.
+3. Instale o bootstrap `npm i bootstrap@5.3.0-alpha1`
+4. Instale o jquery `npm i jquery`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuração da API
 
-## Running end-to-end tests
+1. Crie sua conta em https://www.themoviedb.org/signup
+2. Confirme o cadastro no email recebido
+3. Acesse o link para solicitar criação da chave https://www.themoviedb.org/settings/api
+4. Após preencher o formulário sua chave de acesso estará disponível;
+5. Para acessar os endpoints disponíveis no serviço, acesse a documentação em https://www.themoviedb.org/documentation/api 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Execução
 
-## Further help
+1. Execute o comando `ng serve`.
+2. Abra o navegador e acesse a URL `http://localhost:4200`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+
+Um site de cinema que oferece uma experiência completa aos usuários, com acesso aos filmes mais populares, seus detalhes e pôsteres em alta qualidade. O site conta com uma interface intuitiva e moderna, permitindo que os usuários possam navegar facilmente.
+
