@@ -29,6 +29,23 @@
   object-fit: cover;
 }
 
+.btn-color {
+  background-color: #f72c2c;
+  color: black;
+  border: solid 1px black;
+}
+
+.btn-color:hover {
+  background-color: #a00404;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
 @media (min-width: 576px) {
   .card-tam {
     max-width: 160px;

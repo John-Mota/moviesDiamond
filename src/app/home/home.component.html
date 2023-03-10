@@ -8,9 +8,15 @@
         <div class="card-body title-tam">
           <h5 class="card-title">{{ movie.title }}</h5>
         </div>
-        
       </div>
     </div>
   </div>
 </div>
+  <div class="container " style="width: 350px; "> 
+    <div style="text-align: center; padding: 15px 0;" class="button-container">
+        <button class="btn btn-primary btn-color" (click)=" voltarMaisPopulares ()"> Voltar</button>
+        <h3 style="color: #f72c2c;">Página {{page}}</h3>
+        <button class="btn btn-primary btn-color" (click)="carregarMaisPopulares()"> Carregar</button>
+    </div>
+  </div>
  

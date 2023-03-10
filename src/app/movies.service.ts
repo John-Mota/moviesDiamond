@@ -15,8 +15,8 @@ export class MoviesService {
   
   constructor(private http: HttpClient) {}
 
-  public getMoviesPopulares() {
-    const url = `${this.apiUrl}/movie/popular?api_key=${this.apiKey}&languagem=en-US&page1`;
+  public getMoviesPopulares(page: number = 1) {
+    const url = `${this.apiUrl}/movie/popular?api_key=${this.apiKey}&languagem=en-US&page=${page}`;
 
     return this.http.get(url)
   }
@@ -50,6 +50,7 @@ export class MoviesService {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}&languagem=en-US&page1`
     return this.http.get(url)
   }
+
   
 }
   

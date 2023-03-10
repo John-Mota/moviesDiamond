@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   public movies: any[] = [];
   public movieTitle!: string;
   public hasSearchResults: boolean = false;
+  public page: number = 1;
+  
   constructor (
     private moviesService: MoviesService
     ) {}
@@ -31,11 +33,16 @@ export class HomeComponent implements OnInit {
 
   public popularMovies(): void {
     if(!this.hasSearchResults) {
-      this.moviesService.getMoviesPopulares()
+      this.moviesService.getMoviesPopulares(this.page)
       .subscribe((response: any) => {
       this.movies = response.results
     });
     }
+  }
+
+  public carregarMaisPopulares(): void {
+    this.page++
+    this.popularMovies();
   }
 
   public searchMovies(query: string): void {
@@ -48,5 +55,10 @@ export class HomeComponent implements OnInit {
 
   public getImageUrl(path: string): string {
     return this.moviesService.getImageUrl(path)
+  }
+
+  public voltarMaisPopulares(): void {
+    this.page--
+    this.popularMovies();
   }
 }
