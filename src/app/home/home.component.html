@@ -1,23 +1,18 @@
-
-      <div class="container d-flex justify-content-center align-items-center" *ngIf="movies.length > 0">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xg-3 card-tam" *ngFor="let movie of movies">
-            <div class="card mb-3">
-              <a [routerLink]="['/detalhes', movie.id]" title="Click na imagem para ver os detalhes">
-                <img [src]="getImageUrl(movie.poster_path)" class="card-img-top img-fluid w-100" alt="{{movie.title}}">
-              </a>
-              <div class="card-body title-tam">
-                <h5 class="card-title">{{ movie.title }}</h5>
-              </div>
-              <div class="card-footer" style="margin-top: 1rem;">
-                <small class="text-muted">{{ movie.release_date }}</small>
-              </div>
-            </div>
-          </div>
+<div class="container" *ngIf="movies.length > 0">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 card-tam" *ngFor="let movie of movies">
+      <div class="card mb-3">
+        <a [routerLink]="['/detalhes', movie.id]" title="Click na imagem para ver os detalhes">
+          <img [src]="getImageUrl(movie.poster_path)" class="card-img-top img-fluid w-100" alt="{{movie.title}}">
+        </a>
+        <div class="card-body title-tam">
+          <h5 class="card-title">{{ movie.title }}</h5>
+        </div>
+        <div class="card-footer" style="margin-top: 1rem;">
+          <small class="text-muted">{{ movie.release_date }}</small>
         </div>
       </div>
-    <div *ngIf="movies.length == 0">
-      <p>No movies found.</p>
     </div>
-  
-  
+  </div>
+</div>
+ 

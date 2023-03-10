@@ -1,11 +1,15 @@
-.title-home {
-    color: #f72c2c;
-    text-align: center;
+.row {
+  margin: 0 auto;
 }
+
+.title-home {
+  color: #f72c2c;
+  text-align: center;
+}
+
 /* CSS para ajustar os titúlos do mesmo tamanho*/
 .title-tam {
-  height: 25px;
-
+  height: 70px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
@@ -13,51 +17,48 @@
 }
 
 .card-tam {
-    width: 25vw;
-    padding:  7px;
-    height: 500px;
-  }
-  
-  .card-tam img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 25vw;
+  padding-top: 7px;
+  height: 500px;
+}
 
-  .mb-3 {
-    height: 425px;
-  }
+.card-tam img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (min-width: 576px) {
-    .card-tam {
-      max-width: 160px;
-      margin-right: 10px;
-    }
+  .card-tam {
+    max-width: 160px;
+    margin-right: 10px;
   }
   
-  @media (min-width: 768px) {
-    .card-tam {
-      max-width: 200px;
-    }
+}
+
+@media (min-width: 768px) {
+  .card-tam {
+    max-width: 200px;
   }
-  
-  @media (min-width: 992px) {
-    .card-tam {
-      max-width: 240px;
-    }
+}
+
+@media (min-width: 992px) {
+  .card-tam {
+    max-width: 240px;
   }
-  
-  @media (min-width: 1200px) {
-    .card-tam {
-      max-width: 280px;
-    }
+}
+
+@media (min-width: 1200px) {
+  .card-tam {
+    max-width: 280px;
   }
-  
-  @media only screen and (min-width: 768px) {
-    .d-flex.justify-content-md-between {
-      justify-content: space-between !important;
-    }
-    .col-lg-3 {
-      max-width: 19% !important;
-    }
+}
+
+@media only screen and (min-width: 768px) {
+  .d-flex.justify-content-md-between {
+    justify-content: space-between !important;
   }
+  .col-lg-3 {
+    max-width: 19% !important;
+  }
+}
