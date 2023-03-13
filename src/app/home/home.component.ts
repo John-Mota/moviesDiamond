@@ -45,6 +45,13 @@ export class HomeComponent implements OnInit {
     this.popularMovies();
   }
 
+  public voltarMaisPopulares(): void {
+    if(this.page > 1){
+      this.page--
+      this.popularMovies();
+    }
+  }
+
   public searchMovies(query: string): void {
     this.moviesService.getMoviesSearch(query)
     .subscribe((response: any) => {
@@ -57,8 +64,5 @@ export class HomeComponent implements OnInit {
     return this.moviesService.getImageUrl(path)
   }
 
-  public voltarMaisPopulares(): void {
-    this.page--
-    this.popularMovies();
-  }
+  
 }
