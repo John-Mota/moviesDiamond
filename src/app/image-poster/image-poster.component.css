@@ -7,6 +7,10 @@ img {
     background-color: hsl(0, 0%, 90%);
     transition: background-color 300ms;
   }
+
+  .img-body {
+   margin-top: 70px;
+  }
   
   .full-screen-image {
     max-width: 100%;

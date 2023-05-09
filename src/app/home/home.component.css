@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+.body-home{
+  margin-top: 100px;
+}
+
 .title-home {
   color: #f72c2c;
   text-align: center;

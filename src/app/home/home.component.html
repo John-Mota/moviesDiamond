@@ -1,4 +1,4 @@
-<div class="container" *ngIf="movies.length > 0">
+<div class="container body-home" *ngIf="movies.length > 0">
   <div class="row justify-content-center align-items-center">
     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 card-tam" *ngFor="let movie of movies">
       <div class="card mb-3">
@@ -12,12 +12,10 @@
     </div>
   </div>
 </div>
-  <div class="container " style="width: 350px; "> 
-    <div style="text-align: center; padding: 15px 0;" class="button-container">
-        <button class="btn btn-primary btn-color" (click)=" voltarMaisPopulares ()"> Voltar</button>
-        <h3 style="color: #f72c2c;">Página {{page}}</h3>
-        <button 
-        class="btn btn-primary btn-color"(click)="carregarMaisPopulares()"> Carregar</button>
-    </div>
+<div class="container" style="width: 350px;">
+  <div style="text-align: center; padding: 15px 0;" class="button-container">
+    <h3 style="color: #f72c2c;">Página {{ page }}</h3>
   </div>
+</div>
+
  
