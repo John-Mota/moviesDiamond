@@ -1,13 +1,13 @@
 .borda {
-    background-color: #232323;
-    
-    padding: 20px 0;
-    padding-left: 20px;
-    border-radius: 15px;
-    height: 500px;
-    display: flex;
-    align-items: center;
+  background-color: #232323;
+  padding: 20px 0;
+  padding-left: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .text-center.text-md-left {
     margin-top: 2rem;
@@ -32,6 +32,10 @@
     -webkit-text-stroke: 0.3px #0a0a0a;
 }
 
+.text-datails {
+  height: 500px;
+}
+
 .lancamento {
     color: #f72c2c;
     text-align: center;
@@ -40,11 +44,14 @@
 } 
 
 .details-movie {
-    color: #f72c2c;
-    width: 60%;
-    margin-left: 130px;
-    -webkit-text-stroke: 0.3px #0a0a0a;
+  color: #f72c2c;
+  margin-left: 130px;
+  -webkit-text-stroke: 0.3px #0a0a0a;
+  word-wrap: break-word;
+  overflow: hidden;
 }
+
+
 
 .nota-datails{
     color: #f72c2c;
@@ -65,7 +72,6 @@
 
  .text-datails > h1 {
     color: #f72c2c;
-    font-size: 55px;
     text-align: center;
     -webkit-text-stroke: 0.3px #0a0a0a;
     word-wrap: break-word;
