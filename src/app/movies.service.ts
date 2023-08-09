@@ -51,6 +51,11 @@ export class MoviesService {
     return this.http.get(url)
   }
 
+  public getMovieRatings(movieId: number) {
+    const url = `${this.apiUrl}/movie/${movieId}/reviews?api_key=${this.apiKey}`;
+
+    return this.http.get(url);
+  }
   
 }
   
